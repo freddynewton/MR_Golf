@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "D:/Unity/Unity Projects/MR Golf/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/5s65r6mi/obj/arm64-v8a/libgame.so"
+			"path" : "D:/Unity/Unity Projects/MR Golf/Library/PramData/AndroidApplicationController/Cache/com.unity.template.mixedreality/gradle-project/unityLibrary/build/intermediates/cxx/Debug/5s65r6mi/obj/arm64-v8a/libgame.so"
 		}
 	],
 	"backtrace" : 1,
@@ -73,7 +73,7 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "D:/Unity/Unity Projects/MR Golf/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity"
+					"path" : "D:/Unity/Unity Projects/MR Golf/Library/PramData/AndroidApplicationController/Cache/com.unity.template.mixedreality/gradle-project/unityLibrary/src/main/cpp/GameActivity"
 				},
 				{
 					"backtrace" : 2,

@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Unity/Unity Projects/MR Golf/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp"
+			"value" : "D:/Unity/Unity Projects/MR Golf/Library/PramData/AndroidApplicationController/Cache/com.unity.template.mixedreality/gradle-project/unityLibrary/src/main/cpp"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -695,7 +695,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "D:\\Unity\\Unity Projects\\MR Golf\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\Debug\\5s65r6mi\\obj\\arm64-v8a"
+			"value" : "D:\\Unity\\Unity Projects\\MR Golf\\Library\\PramData\\AndroidApplicationController\\Cache\\com.unity.template.mixedreality\\gradle-project\\unityLibrary\\build\\intermediates\\cxx\\Debug\\5s65r6mi\\obj\\arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -967,7 +967,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "D:\\Unity\\Unity Projects\\MR Golf\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\Debug\\5s65r6mi\\obj\\arm64-v8a"
+			"value" : "D:\\Unity\\Unity Projects\\MR Golf\\Library\\PramData\\AndroidApplicationController\\Cache\\com.unity.template.mixedreality\\gradle-project\\unityLibrary\\build\\intermediates\\cxx\\Debug\\5s65r6mi\\obj\\arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Unity/Unity Projects/MR Golf/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp"
+			"value" : "D:/Unity/Unity Projects/MR Golf/Library/PramData/AndroidApplicationController/Cache/com.unity.template.mixedreality/gradle-project/unityLibrary/src/main/cpp"
 		},
 		{
 			"name" : "game-activity_DIR",
@@ -1323,7 +1323,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Unity/Unity Projects/MR Golf/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity"
+			"value" : "D:/Unity/Unity Projects/MR Golf/Library/PramData/AndroidApplicationController/Cache/com.unity.template.mixedreality/gradle-project/unityLibrary/src/main/cpp/GameActivity"
 		}
 	],
 	"kind" : "cache",
