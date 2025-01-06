@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5622301171128387933}
   - component: {fileID: 6174405192880488324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 8693403868826732368}
   - component: {fileID: 1608082980958009174}
   - component: {fileID: 1951473152711441741}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Golf Club
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,9 +158,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924223821136907753}
   serializedVersion: 4
-  m_Mass: 2
-  m_Drag: 0
-  m_AngularDrag: 0.1
+  m_Mass: 1.5
+  m_Drag: 50
+  m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -272,7 +272,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1904213759
   source: {fileID: 0}
-  clip: {fileID: 8300000, guid: d3ff261c5dbf4404b97c340c05bda8b4, type: 3}
+  clip: {fileID: 8300000, guid: 9c49876e831bce747bc0ab0087a9ef05, type: 3}
   velocityVolumeCurve:
     serializedVersion: 2
     m_Curve:
@@ -310,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2563151626461695692}
   - component: {fileID: 5466525949202973810}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2715577234841143771}
   - component: {fileID: 2105852004506276535}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7332126921434535930}
   - component: {fileID: 7921373594530612699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,8 +432,8 @@ Transform:
   m_GameObject: {fileID: 9101057124975449961}
   serializedVersion: 2
   m_LocalRotation: {x: -0.26656622, y: -0, z: -0, w: 0.96381664}
-  m_LocalPosition: {x: 0, y: -0.0679, z: -0.1028}
-  m_LocalScale: {x: 0.15594, y: 0.55319124, z: 0.18880998}
+  m_LocalPosition: {x: 0, y: -0.0616, z: -0.0923}
+  m_LocalScale: {x: 0.15594, y: 0.55319124, z: 0.45956743}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6056001867276050130}
