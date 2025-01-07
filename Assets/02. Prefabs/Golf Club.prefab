@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6174405192880488324}
   m_Layer: 9
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Golfclub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 1951473152711441741}
   m_Layer: 9
   m_Name: Golf Club
-  m_TagString: Untagged
+  m_TagString: Golfclub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,7 +159,7 @@ Rigidbody:
   m_GameObject: {fileID: 1924223821136907753}
   serializedVersion: 4
   m_Mass: 1.5
-  m_Drag: 50
+  m_Drag: 2
   m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -209,7 +209,7 @@ MonoBehaviour:
   jointBreakForce: 3500
   showAdvancedSettings: 1
   makeChildrenGrabbable: 1
-  grabPriorityWeight: 1
+  grabPriorityWeight: 2
   ignoreReleaseTime: 0.5
   minHeldDrag: 1.5
   minHeldAngleDrag: 3
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 5466525949202973810}
   m_Layer: 9
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Golfclub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 2105852004506276535}
   m_Layer: 9
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Golfclub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 7921373594530612699}
   m_Layer: 9
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Golfclub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
