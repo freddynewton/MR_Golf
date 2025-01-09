@@ -20,6 +20,11 @@ public class XrSpawnerLink : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (devices == null)
+        {
+            return;
+        }
+
         InputDevices.GetDevicesAtXRNode(role, devices);
         if (devices.Count > 0)
             device = devices[0];

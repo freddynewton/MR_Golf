@@ -34,26 +34,8 @@ public class GolfTrackController : MonoBehaviour, ISpawnable
     {
         m_golfBallDispencer.SetActive(false);
         m_golfClub.SetActive(false);
-        m_renderer = GetComponent<Renderer>();
+        m_renderer = m_golfTrack.GetComponent<Renderer>();
         m_originalMaterial = Renderer.material;
-    }
-
-    /// <summary>
-    /// Starts the golf track by activating the golf ball dispenser and golf club.
-    /// </summary>
-    public void StartTrack()
-    {
-        m_golfBallDispencer.SetActive(true);
-        m_golfClub.SetActive(true);
-    }
-
-    /// <summary>
-    /// Ends the golf track by deactivating the golf ball dispenser and golf club.
-    /// </summary>
-    public void EndTrack()
-    {
-        m_golfBallDispencer.SetActive(false);
-        m_golfClub.SetActive(false);
     }
 
     /// <summary>
@@ -73,7 +55,7 @@ public class GolfTrackController : MonoBehaviour, ISpawnable
         Renderer.material = m_originalMaterial;
         m_golfTrack.SetActive(true);
         m_golfClub.SetActive(true);
-        m_golfTrack.SetActive(true);
+        m_golfBallDispencer.SetActive(true);
     }
 
     /// <summary>

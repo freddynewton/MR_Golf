@@ -3,61 +3,91 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+/// <summary>
+/// Handles the spawning of a golf track in the scene.
+/// </summary>
 public class XrSpawner : MonoBehaviour
 {
+    #region Serialized Fields
+
     [Header("Spawn Settings")]
     [Tooltip("The object to spawn")]
-    public GolfTrackController spawnGolfTrack;
+    [SerializeField] private GolfTrackController spawnGolfTrack;
 
-    [SerializeField] private Material m_spawnMaterial; // Material to use when spawning the golf track
+    [Tooltip("Material to use when spawning the golf track")]
+    [SerializeField] private Material m_spawnMaterial;
 
     [Header("Aim Settings")]
     [Tooltip("The Object to Shoot the Beam From")]
-    public Transform aimer;
-    public float aimerSmoothingSpeed = 5f;
+    [SerializeField] private Transform aimer;
+    [Tooltip("Smoothing speed for the aimer")]
+    [SerializeField] private float aimerSmoothingSpeed = 5f;
     [Tooltip("Layers You Can Spawn On")]
-    public LayerMask layer;
+    [SerializeField] private LayerMask layer;
     [Tooltip("The Maximum Slope You Can Spawn On")]
-    public float maxSurfaceAngle = 45;
+    [SerializeField] private float maxSurfaceAngle = 45;
     [Min(0)]
-    public float distanceMultiplyer = 1;
+    [Tooltip("Distance multiplier for the spawn line")]
+    [SerializeField] private float distanceMultiplyer = 1;
     [Min(0)]
-    public float curveStrength = 1;
+    [Tooltip("Curve strength for the spawn line")]
+    [SerializeField] private float curveStrength = 1;
     [Tooltip("Use Worldspace Must be True")]
-    public LineRenderer line;
+    [SerializeField] private LineRenderer line;
     [Tooltip("Maximum Length of The Spawn Line")]
-    public int lineSegments = 50;
+    [SerializeField] private int lineSegments = 50;
 
     [Header("Line Settings")]
-    public Gradient canSpawnColor = new Gradient() { colorKeys = new GradientColorKey[] { new GradientColorKey() { color = Color.green, time = 0 } } };
-    public Gradient cantSpawnColor = new Gradient() { colorKeys = new GradientColorKey[] { new GradientColorKey() { color = Color.red, time = 0 } } };
-
+    [Tooltip("Color gradient when spawning is possible")]
+    [SerializeField] private Gradient canSpawnColor = new Gradient() { colorKeys = new GradientColorKey[] { new GradientColorKey() { color = Color.green, time = 0 } } };
+    [Tooltip("Color gradient when spawning is not possible")]
+    [SerializeField] private Gradient cantSpawnColor = new Gradient() { colorKeys = new GradientColorKey[] { new GradientColorKey() { color = Color.red, time = 0 } } };
 
     [Header("Unity Events")]
-    public UnityEvent OnStartSpawn;
-    public UnityEvent OnStopSpawn;
-    public UnityEvent OnSpawn;
+    [Tooltip("Event triggered when spawning starts")]
+    [SerializeField] private UnityEvent OnStartSpawn;
+    [Tooltip("Event triggered when spawning stops")]
+    [SerializeField] private UnityEvent OnStopSpawn;
+    [Tooltip("Event triggered when spawning is completed")]
+    [SerializeField] private UnityEvent OnSpawn;
 
-    Vector3[] lineArr;
-    bool aiming;
-    bool hitting;
-    RaycastHit aimHit;
+    #endregion
 
-    Vector3 currentSpawnSmoothForward;
-    Vector3 currentSpawnForward;
-    Vector3 currentSpawnPosition;
+    #region Private Fields
 
+    private Vector3[] lineArr;
+    private bool aiming;
+    private bool hitting;
+    private RaycastHit aimHit;
+
+    private Vector3 currentSpawnSmoothForward;
+    private Vector3 currentSpawnForward;
+    private Vector3 currentSpawnPosition;
+
+    #endregion
+
+    #region Unity Methods
+
+    /// <summary>
+    /// Called when the script instance is being loaded.
+    /// </summary>
     private void Awake()
     {
         line.enabled = false;
     }
 
+    /// <summary>
+    /// Called on the frame when a script is enabled just before any of the Update methods are called the first time.
+    /// </summary>
     private void Start()
     {
         lineArr = new Vector3[lineSegments];
     }
 
-    void LateUpdate()
+    /// <summary>
+    /// Called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    private void LateUpdate()
     {
         SmoothTargetValues();
 
@@ -72,14 +102,73 @@ public class XrSpawner : MonoBehaviour
         }
     }
 
-    void SmoothTargetValues()
+    #endregion
+
+    #region Public Methods
+
+    /// <summary>
+    /// Starts the spawning process.
+    /// </summary>
+    public void StartSpawn()
+    {
+        aiming = true;
+        spawnGolfTrack.PrepareForSpawn(m_spawnMaterial);
+        OnStartSpawn?.Invoke();
+    }
+
+    /// <summary>
+    /// Cancels the spawning process.
+    /// </summary>
+    public void CancelSpawn()
+    {
+        line.positionCount = 0;
+        line.enabled = false;
+        hitting = false;
+        aiming = false;
+        OnStopSpawn?.Invoke();
+
+        // spawnGolfTrack.Despawn();
+    }
+
+    /// <summary>
+    /// Completes the spawning process.
+    /// </summary>
+    public void Spawn()
+    {
+        if (hitting)
+        {
+            if (spawnGolfTrack != null)
+            {
+                var diff = aimHit.point - spawnGolfTrack.transform.position;
+                spawnGolfTrack.transform.position = aimHit.point;
+            }
+            spawnGolfTrack.transform.position = aimHit.point;
+            spawnGolfTrack.Spawn();
+
+            OnSpawn?.Invoke();
+        }
+
+        CancelSpawn();
+    }
+
+    #endregion
+
+    #region Private Methods
+
+    /// <summary>
+    /// Smooths the target values for the aimer.
+    /// </summary>
+    private void SmoothTargetValues()
     {
         currentSpawnForward = aimer.forward;
         currentSpawnPosition = aimer.position;
         currentSpawnSmoothForward = Vector3.Lerp(currentSpawnSmoothForward, currentSpawnForward, Time.deltaTime * aimerSmoothingSpeed);
     }
 
-    void CalculateSpawn()
+    /// <summary>
+    /// Calculates the spawn position and updates the line renderer.
+    /// </summary>
+    private void CalculateSpawn() 
     {
         line.colorGradient = cantSpawnColor;
         var lineList = new List<Vector3>();
@@ -96,7 +185,7 @@ public class XrSpawner : MonoBehaviour
             {
                 if (Physics.Raycast(lineArr[i - 1], lineArr[i] - lineArr[i - 1], out aimHit, Vector3.Distance(lineArr[i], lineArr[i - 1]), ~Hand.GetHandsLayerMask(), QueryTriggerInteraction.Ignore))
                 {
-                    //Makes sure the angle isnt too steep
+                    // Makes sure the angle isn't too steep
                     if (Vector3.Angle(aimHit.normal, Vector3.up) <= maxSurfaceAngle && layer == (layer | (1 << aimHit.collider.gameObject.layer)))
                     {
                         line.colorGradient = canSpawnColor;
@@ -113,7 +202,10 @@ public class XrSpawner : MonoBehaviour
         line.SetPositions(lineArr);
     }
 
-    void DrawIndicator()
+    /// <summary>
+    /// Draws the indicator for the spawn position.
+    /// </summary>
+    private void DrawIndicator()
     {
         if (hitting)
         {
@@ -127,43 +219,5 @@ public class XrSpawner : MonoBehaviour
         }
     }
 
-    public void StartSpawn()
-    {
-        aiming = true;
-        spawnGolfTrack.PrepareForSpawn(m_spawnMaterial);
-        OnStartSpawn?.Invoke();
-    }
-
-    public void CancelSpawn()
-    {
-        line.positionCount = 0;
-        line.enabled = false;
-        hitting = false;
-        aiming = false;
-        OnStopSpawn?.Invoke();
-
-        spawnGolfTrack.Despawn();
-    }
-
-    public void Spawn()
-    {
-        Queue<Vector3> fromPos = new Queue<Vector3>();
-
-        if (hitting)
-        {
-            if (spawnGolfTrack != null)
-            {
-                var diff = aimHit.point - spawnGolfTrack.transform.position;
-                spawnGolfTrack.transform.position = aimHit.point;
-            }
-            spawnGolfTrack.transform.position = aimHit.point;
-            spawnGolfTrack.Spawn();
-
-            OnSpawn?.Invoke();
-
-            return;
-        }
-
-        CancelSpawn();
-    }
+    #endregion
 }
