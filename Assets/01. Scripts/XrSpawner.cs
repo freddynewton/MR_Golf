@@ -12,57 +12,64 @@ public class XrSpawner : MonoBehaviour
 
     [Header("Spawn Settings")]
     [Tooltip("The object to spawn")]
-    [SerializeField] private GolfTrackController spawnGolfTrack;
+    [SerializeField] private GolfTrackController m_spawnGolfTrack;
 
     [Tooltip("Material to use when spawning the golf track")]
     [SerializeField] private Material m_spawnMaterial;
 
     [Header("Aim Settings")]
     [Tooltip("The Object to Shoot the Beam From")]
-    [SerializeField] private Transform aimer;
+    [SerializeField] private Transform m_aimer;
+
     [Tooltip("Smoothing speed for the aimer")]
-    [SerializeField] private float aimerSmoothingSpeed = 5f;
+    [SerializeField] private float m_aimerSmoothingSpeed = 5f;
+
     [Tooltip("Layers You Can Spawn On")]
-    [SerializeField] private LayerMask layer;
+    [SerializeField] private LayerMask m_layer;
+
     [Tooltip("The Maximum Slope You Can Spawn On")]
-    [SerializeField] private float maxSurfaceAngle = 45;
+    [SerializeField] private float m_maxSurfaceAngle = 45;
+
     [Min(0)]
     [Tooltip("Distance multiplier for the spawn line")]
-    [SerializeField] private float distanceMultiplyer = 1;
+    [SerializeField] private float m_distanceMultiplyer = 1;
+
     [Min(0)]
     [Tooltip("Curve strength for the spawn line")]
-    [SerializeField] private float curveStrength = 1;
+    [SerializeField] private float m_curveStrength = 1;
+
     [Tooltip("Use Worldspace Must be True")]
-    [SerializeField] private LineRenderer line;
+    [SerializeField] private LineRenderer m_line;
+
     [Tooltip("Maximum Length of The Spawn Line")]
-    [SerializeField] private int lineSegments = 50;
+    [SerializeField] private int m_lineSegments = 50;
 
     [Header("Line Settings")]
     [Tooltip("Color gradient when spawning is possible")]
-    [SerializeField] private Gradient canSpawnColor = new Gradient() { colorKeys = new GradientColorKey[] { new GradientColorKey() { color = Color.green, time = 0 } } };
+    [SerializeField] private Gradient m_canSpawnColor = new Gradient() { colorKeys = new GradientColorKey[] { new GradientColorKey() { color = Color.green, time = 0 } } };
     [Tooltip("Color gradient when spawning is not possible")]
-    [SerializeField] private Gradient cantSpawnColor = new Gradient() { colorKeys = new GradientColorKey[] { new GradientColorKey() { color = Color.red, time = 0 } } };
+    [SerializeField] private Gradient m_cantSpawnColor = new Gradient() { colorKeys = new GradientColorKey[] { new GradientColorKey() { color = Color.red, time = 0 } } };
 
     [Header("Unity Events")]
     [Tooltip("Event triggered when spawning starts")]
-    [SerializeField] private UnityEvent OnStartSpawn;
+    [SerializeField] private UnityEvent m_OnStartSpawn;
     [Tooltip("Event triggered when spawning stops")]
-    [SerializeField] private UnityEvent OnStopSpawn;
+    [SerializeField] private UnityEvent m_OnStopSpawn;
     [Tooltip("Event triggered when spawning is completed")]
-    [SerializeField] private UnityEvent OnSpawn;
+    [SerializeField] private UnityEvent m_OnSpawn;
 
     #endregion
 
     #region Private Fields
 
-    private Vector3[] lineArr;
-    private bool aiming;
-    private bool hitting;
-    private RaycastHit aimHit;
+    private Vector3[] m_lineArr;
+    private bool m_aiming;
+    private bool m_hitting;
+    private RaycastHit m_aimHit;
 
-    private Vector3 currentSpawnSmoothForward;
-    private Vector3 currentSpawnForward;
-    private Vector3 currentSpawnPosition;
+    private Vector3 m_currentSpawnSmoothForward;
+    private Vector3 m_currentSpawnForward;
+    private Vector3 m_currentSpawnPosition;
 
     #endregion
 
@@ -73,7 +80,7 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     private void Awake()
     {
-        line.enabled = false;
+        m_line.enabled = false;
     }
 
     /// <summary>
@@ -81,7 +88,7 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        lineArr = new Vector3[lineSegments];
+        m_lineArr = new Vector3[m_lineSegments];
     }
 
     /// <summary>
@@ -91,14 +98,14 @@ public class XrSpawner : MonoBehaviour
     {
         SmoothTargetValues();
 
-        if (aiming)
+        if (m_aiming)
         {
             DrawIndicator();
             CalculateSpawn();
         }
         else
         {
-            line.positionCount = 0;
+            m_line.positionCount = 0;
         }
     }
 
@@ -111,9 +118,9 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     public void StartSpawn()
     {
-        aiming = true;
-        spawnGolfTrack.PrepareForSpawn(m_spawnMaterial);
-        OnStartSpawn?.Invoke();
+        m_aiming = true;
+        m_spawnGolfTrack.PrepareForSpawn(m_spawnMaterial);
+        m_OnStartSpawn?.Invoke();
     }
 
     /// <summary>
@@ -121,13 +128,13 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     public void CancelSpawn()
     {
-        line.positionCount = 0;
-        line.enabled = false;
-        hitting = false;
-        aiming = false;
-        OnStopSpawn?.Invoke();
+        m_line.positionCount = 0;
+        m_line.enabled = false;
+        m_hitting = false;
+        m_aiming = false;
+        m_OnStopSpawn?.Invoke();
 
-        // spawnGolfTrack.Despawn();
+        // m_spawnGolfTrack.Despawn();
     }
 
     /// <summary>
@@ -135,17 +142,17 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     public void Spawn()
     {
-        if (hitting)
+        if (m_hitting)
         {
-            if (spawnGolfTrack != null)
+            if (m_spawnGolfTrack != null)
             {
-                var diff = aimHit.point - spawnGolfTrack.transform.position;
-                spawnGolfTrack.transform.position = aimHit.point;
+                var diff = m_aimHit.point - m_spawnGolfTrack.transform.position;
+                m_spawnGolfTrack.transform.position = m_aimHit.point;
             }
-            spawnGolfTrack.transform.position = aimHit.point;
-            spawnGolfTrack.Spawn();
+            m_spawnGolfTrack.transform.position = m_aimHit.point;
+            m_spawnGolfTrack.Spawn();
 
-            OnSpawn?.Invoke();
+            m_OnSpawn?.Invoke();
         }
 
         CancelSpawn();
@@ -160,46 +167,46 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     private void SmoothTargetValues()
     {
-        currentSpawnForward = aimer.forward;
-        currentSpawnPosition = aimer.position;
-        currentSpawnSmoothForward = Vector3.Lerp(currentSpawnSmoothForward, currentSpawnForward, Time.deltaTime * aimerSmoothingSpeed);
+        m_currentSpawnForward = m_aimer.forward;
+        m_currentSpawnPosition = m_aimer.position;
+        m_currentSpawnSmoothForward = Vector3.Lerp(m_currentSpawnSmoothForward, m_currentSpawnForward, Time.deltaTime * m_aimerSmoothingSpeed);
     }
 
     /// <summary>
     /// Calculates the spawn position and updates the line renderer.
     /// </summary>
-    private void CalculateSpawn() 
+    private void CalculateSpawn()
     {
-        line.colorGradient = cantSpawnColor;
+        m_line.colorGradient = m_cantSpawnColor;
         var lineList = new List<Vector3>();
         int i;
-        hitting = false;
-        for (i = 0; i < lineSegments; i++)
+        m_hitting = false;
+        for (i = 0; i < m_lineSegments; i++)
         {
             var time = i / 60f;
-            lineArr[i] = currentSpawnPosition;
-            lineArr[i] += currentSpawnSmoothForward * time * distanceMultiplyer * 15;
-            lineArr[i].y += curveStrength * (time - Mathf.Pow(9.8f * 0.5f * time, 2));
-            lineList.Add(lineArr[i]);
+            m_lineArr[i] = m_currentSpawnPosition;
+            m_lineArr[i] += m_currentSpawnSmoothForward * time * m_distanceMultiplyer * 15;
+            m_lineArr[i].y += m_curveStrength * (time - Mathf.Pow(9.8f * 0.5f * time, 2));
+            lineList.Add(m_lineArr[i]);
             if (i != 0)
             {
-                if (Physics.Raycast(lineArr[i - 1], lineArr[i] - lineArr[i - 1], out aimHit, Vector3.Distance(lineArr[i], lineArr[i - 1]), ~Hand.GetHandsLayerMask(), QueryTriggerInteraction.Ignore))
+                if (Physics.Raycast(m_lineArr[i - 1], m_lineArr[i] - m_lineArr[i - 1], out m_aimHit, Vector3.Distance(m_lineArr[i], m_lineArr[i - 1]), ~Hand.GetHandsLayerMask(), QueryTriggerInteraction.Ignore))
                 {
                     // Makes sure the angle isn't too steep
-                    if (Vector3.Angle(aimHit.normal, Vector3.up) <= maxSurfaceAngle && layer == (layer | (1 << aimHit.collider.gameObject.layer)))
+                    if (Vector3.Angle(m_aimHit.normal, Vector3.up) <= m_maxSurfaceAngle && m_layer == (m_layer | (1 << m_aimHit.collider.gameObject.layer)))
                     {
-                        line.colorGradient = canSpawnColor;
-                        lineList.Add(aimHit.point);
-                        hitting = true;
+                        m_line.colorGradient = m_canSpawnColor;
+                        lineList.Add(m_aimHit.point);
+                        m_hitting = true;
                         break;
                     }
                     break;
                 }
             }
         }
-        line.enabled = true;
-        line.positionCount = i;
-        line.SetPositions(lineArr);
+        m_line.enabled = true;
+        m_line.positionCount = i;
+        m_line.SetPositions(m_lineArr);
     }
 
     /// <summary>
@@ -207,15 +214,15 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     private void DrawIndicator()
     {
-        if (hitting)
+        if (m_hitting)
         {
-            spawnGolfTrack.gameObject.SetActive(true);
-            spawnGolfTrack.transform.position = aimHit.point;
-            spawnGolfTrack.transform.up = aimHit.normal;
+            m_spawnGolfTrack.gameObject.SetActive(true);
+            m_spawnGolfTrack.transform.position = m_aimHit.point;
+            m_spawnGolfTrack.transform.up = m_aimHit.normal;
         }
         else
         {
-            spawnGolfTrack.gameObject.SetActive(false);
+            m_spawnGolfTrack.gameObject.SetActive(false);
         }
     }
 

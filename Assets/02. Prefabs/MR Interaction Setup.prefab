@@ -1925,52 +1925,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab653dd70bc7d124185cbdb20dfe8191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnObject: {fileID: 0}
-  additionalSpawns: []
-  aimer: {fileID: 5705665604838104742}
-  aimerSmoothingSpeed: 7
-  layer:
+  m_spawnGolfTrack: {fileID: 0}
+  m_spawnMaterial: {fileID: 2100000, guid: 3f797f14ef6a382468d3e23e42e1f62e, type: 2}
+  m_aimer: {fileID: 1581480512139437821}
+  m_aimerSmoothingSpeed: 5
+  m_layer:
     serializedVersion: 2
     m_Bits: 291
-  maxSurfaceAngle: 45
-  distanceMultiplyer: 1
-  curveStrength: 1
-  line: {fileID: 985448664715098694}
-  lineSegments: 100
-  canSpawnColor:
+  m_maxSurfaceAngle: 45
+  m_distanceMultiplyer: 1
+  m_curveStrength: 1
+  m_line: {fileID: 985448664715098694}
+  m_lineSegments: 50
+  m_canSpawnColor:
     serializedVersion: 2
-    key0: {r: 0.9292453, g: 0.97974473, b: 1, a: 1}
-    key1: {r: 0, g: 0.7137255, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 52814
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 46067
-    atime2: 57632
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_ColorSpace: -1
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 3
-  cantSpawnColor:
-    serializedVersion: 2
-    key0: {r: 1, g: 0.6745283, b: 0.6745283, a: 1}
-    key1: {r: 0.9056604, g: 0.40583837, b: 0.40583837, a: 1}
+    key0: {r: 0, g: 1, b: 0, a: 1}
+    key1: {r: 0, g: 1, b: 0, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1986,8 +1956,8 @@ MonoBehaviour:
     ctime6: 0
     ctime7: 0
     atime0: 0
-    atime1: 50501
-    atime2: 65535
+    atime1: 65535
+    atime2: 0
     atime3: 0
     atime4: 0
     atime5: 0
@@ -1996,15 +1966,44 @@ MonoBehaviour:
     m_Mode: 0
     m_ColorSpace: -1
     m_NumColorKeys: 2
-    m_NumAlphaKeys: 3
-  indicator: {fileID: 2319422028772166261}
-  OnStartSpawn:
+    m_NumAlphaKeys: 2
+  m_cantSpawnColor:
+    serializedVersion: 2
+    key0: {r: 1, g: 0, b: 0, a: 1}
+    key1: {r: 1, g: 0, b: 0, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  m_OnStartSpawn:
     m_PersistentCalls:
       m_Calls: []
-  OnStopSpawn:
+  m_OnStopSpawn:
     m_PersistentCalls:
       m_Calls: []
-  OnSpawn:
+  m_OnSpawn:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &4340979133539851474
@@ -2022,9 +2021,9 @@ MonoBehaviour:
   XrSpawner: {fileID: 6080624131275152385}
   role: 5
   button: 5
---- !u!1 &2319422028772166261 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2076220175860024634, guid: 89dffe45961978543a2f1c5389c77fcf, type: 3}
+--- !u!4 &1581480512139437821 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2959574215978297778, guid: 89dffe45961978543a2f1c5389c77fcf, type: 3}
   m_PrefabInstance: {fileID: 4386516156883439439}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5705665604838104742 stripped
