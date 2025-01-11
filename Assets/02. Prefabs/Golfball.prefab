@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 7800337812749540578}
   m_Layer: 9
   m_Name: Golfball
-  m_TagString: Untagged
+  m_TagString: Golfball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_stoppingSpeed: 0.2
+  m_forceMultiplier: 1
   m_trailRenderer: {fileID: 7800337812749540578}
   m_rigidbody: {fileID: 2614281847981781995}
 --- !u!33 &210554245728708768

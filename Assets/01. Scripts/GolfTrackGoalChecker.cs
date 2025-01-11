@@ -15,7 +15,7 @@ public class GolfTrackGoalChecker : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // Check if the object that entered the trigger has the tag "GolfBall"
-        if (other.gameObject.CompareTag("GolfBall"))
+        if (other.gameObject.CompareTag("Golfball"))
         {
             // Destroy the golf ball object after 5 seconds
             Destroy(other.gameObject, 5);

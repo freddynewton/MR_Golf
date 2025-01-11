@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Golfclub
+  - Golfball
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Grabbable
   - Hand
   - HandPlayer
-  - Placeable
-  - 
+  - GolfTrack
+  - Player
   - 
   - 
   - 
