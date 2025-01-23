@@ -1,8 +1,28 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class XrInputManager : MonoBehaviour
+public class XrInputManager :  Singleton<XrInputManager>
 {
-    public InputActionAsset actionAsset;
+    private XRIDefaultInputActions xrInputActions;
 
+    public InputAction GetAction(string actionName)
+    {
+        return xrInputActions.FindAction(actionName);
+    }
+
+    private void OnEnable()
+    {
+        xrInputActions.Enable();
+    }
+
+    private void OnDisable()
+    {
+        xrInputActions.Disable();
+    }
+
+    private void Awake()
+    {
+        xrInputActions = new XRIDefaultInputActions();
+        xrInputActions.Enable();
+    }
 }
