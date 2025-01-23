@@ -12,7 +12,7 @@ public class XrSpawner : MonoBehaviour
 
     [Header("Spawn Settings")]
     [Tooltip("The object to spawn")]
-    [SerializeField] private GolfTrackController m_spawnGolfTrack;
+    [SerializeField] private GameObject m_gameSpawnContainer;
 
     [Tooltip("Material to use when spawning the golf track")]
     [SerializeField] private Material m_spawnMaterial;
@@ -119,7 +119,6 @@ public class XrSpawner : MonoBehaviour
     public void StartSpawn()
     {
         m_aiming = true;
-        m_spawnGolfTrack.PrepareForSpawn(m_spawnMaterial);
         m_OnStartSpawn?.Invoke();
     }
 
@@ -144,13 +143,12 @@ public class XrSpawner : MonoBehaviour
     {
         if (m_hitting)
         {
-            if (m_spawnGolfTrack != null)
+            if (m_gameSpawnContainer != null)
             {
-                var diff = m_aimHit.point - m_spawnGolfTrack.transform.position;
-                m_spawnGolfTrack.transform.position = m_aimHit.point;
+                var diff = m_aimHit.point - m_gameSpawnContainer.transform.position;
+                m_gameSpawnContainer.transform.position = m_aimHit.point;
             }
-            m_spawnGolfTrack.transform.position = m_aimHit.point;
-            m_spawnGolfTrack.Spawn();
+            m_gameSpawnContainer.transform.position = m_aimHit.point;
 
             m_OnSpawn?.Invoke();
         }
@@ -216,13 +214,13 @@ public class XrSpawner : MonoBehaviour
     {
         if (m_hitting)
         {
-            m_spawnGolfTrack.gameObject.SetActive(true);
-            m_spawnGolfTrack.transform.position = m_aimHit.point;
-            m_spawnGolfTrack.transform.up = m_aimHit.normal;
+            m_gameSpawnContainer.gameObject.SetActive(true);
+            m_gameSpawnContainer.transform.position = m_aimHit.point;
+            m_gameSpawnContainer.transform.up = m_aimHit.normal;
         }
         else
         {
-            m_spawnGolfTrack.gameObject.SetActive(false);
+            m_gameSpawnContainer.gameObject.SetActive(false);
         }
     }
 
