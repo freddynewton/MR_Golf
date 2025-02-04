@@ -16,6 +16,8 @@ public class GolfSpawnHandler : MonoBehaviour
     [Tooltip("The container for the golf track.")]
     [SerializeField] private Transform golfTrackContainer;
 
+
+
     private SpawnRotationIndicatorController spawnRotationIndicatorController;
     private bool isTurning;
     private float currentRotationSpeed;
