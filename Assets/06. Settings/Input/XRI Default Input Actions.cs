@@ -2052,7 +2052,7 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Scale Toggle"",
+                    ""name"": ""Right Stick Click"",
                     ""type"": ""Button"",
                     ""id"": ""5ad73d15-99a4-4bce-a76f-f49815602416"",
                     ""expectedControlType"": """",
@@ -2320,7 +2320,7 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Scale Toggle"",
+                    ""action"": ""Right Stick Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -3415,7 +3415,7 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
         m_XRIRightInteraction_TranslateManipulation = m_XRIRightInteraction.FindAction("Translate Manipulation", throwIfNotFound: true);
         m_XRIRightInteraction_RotateManipulation = m_XRIRightInteraction.FindAction("Rotate Manipulation", throwIfNotFound: true);
         m_XRIRightInteraction_DirectionalManipulation = m_XRIRightInteraction.FindAction("Directional Manipulation", throwIfNotFound: true);
-        m_XRIRightInteraction_ScaleToggle = m_XRIRightInteraction.FindAction("Scale Toggle", throwIfNotFound: true);
+        m_XRIRightInteraction_RightStickClick = m_XRIRightInteraction.FindAction("Right Stick Click", throwIfNotFound: true);
         m_XRIRightInteraction_ScaleOverTime = m_XRIRightInteraction.FindAction("Scale Over Time", throwIfNotFound: true);
         // XRI Right Locomotion
         m_XRIRightLocomotion = asset.FindActionMap("XRI Right Locomotion", throwIfNotFound: true);
@@ -4153,7 +4153,7 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
     private readonly InputAction m_XRIRightInteraction_TranslateManipulation;
     private readonly InputAction m_XRIRightInteraction_RotateManipulation;
     private readonly InputAction m_XRIRightInteraction_DirectionalManipulation;
-    private readonly InputAction m_XRIRightInteraction_ScaleToggle;
+    private readonly InputAction m_XRIRightInteraction_RightStickClick;
     private readonly InputAction m_XRIRightInteraction_ScaleOverTime;
     public struct XRIRightInteractionActions
     {
@@ -4169,7 +4169,7 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
         public InputAction @TranslateManipulation => m_Wrapper.m_XRIRightInteraction_TranslateManipulation;
         public InputAction @RotateManipulation => m_Wrapper.m_XRIRightInteraction_RotateManipulation;
         public InputAction @DirectionalManipulation => m_Wrapper.m_XRIRightInteraction_DirectionalManipulation;
-        public InputAction @ScaleToggle => m_Wrapper.m_XRIRightInteraction_ScaleToggle;
+        public InputAction @RightStickClick => m_Wrapper.m_XRIRightInteraction_RightStickClick;
         public InputAction @ScaleOverTime => m_Wrapper.m_XRIRightInteraction_ScaleOverTime;
         public InputActionMap Get() { return m_Wrapper.m_XRIRightInteraction; }
         public void Enable() { Get().Enable(); }
@@ -4210,9 +4210,9 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
             @DirectionalManipulation.started += instance.OnDirectionalManipulation;
             @DirectionalManipulation.performed += instance.OnDirectionalManipulation;
             @DirectionalManipulation.canceled += instance.OnDirectionalManipulation;
-            @ScaleToggle.started += instance.OnScaleToggle;
-            @ScaleToggle.performed += instance.OnScaleToggle;
-            @ScaleToggle.canceled += instance.OnScaleToggle;
+            @RightStickClick.started += instance.OnRightStickClick;
+            @RightStickClick.performed += instance.OnRightStickClick;
+            @RightStickClick.canceled += instance.OnRightStickClick;
             @ScaleOverTime.started += instance.OnScaleOverTime;
             @ScaleOverTime.performed += instance.OnScaleOverTime;
             @ScaleOverTime.canceled += instance.OnScaleOverTime;
@@ -4250,9 +4250,9 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
             @DirectionalManipulation.started -= instance.OnDirectionalManipulation;
             @DirectionalManipulation.performed -= instance.OnDirectionalManipulation;
             @DirectionalManipulation.canceled -= instance.OnDirectionalManipulation;
-            @ScaleToggle.started -= instance.OnScaleToggle;
-            @ScaleToggle.performed -= instance.OnScaleToggle;
-            @ScaleToggle.canceled -= instance.OnScaleToggle;
+            @RightStickClick.started -= instance.OnRightStickClick;
+            @RightStickClick.performed -= instance.OnRightStickClick;
+            @RightStickClick.canceled -= instance.OnRightStickClick;
             @ScaleOverTime.started -= instance.OnScaleOverTime;
             @ScaleOverTime.performed -= instance.OnScaleOverTime;
             @ScaleOverTime.canceled -= instance.OnScaleOverTime;
@@ -4660,7 +4660,7 @@ public partial class @XRIDefaultInputActions: IInputActionCollection2, IDisposab
         void OnTranslateManipulation(InputAction.CallbackContext context);
         void OnRotateManipulation(InputAction.CallbackContext context);
         void OnDirectionalManipulation(InputAction.CallbackContext context);
-        void OnScaleToggle(InputAction.CallbackContext context);
+        void OnRightStickClick(InputAction.CallbackContext context);
         void OnScaleOverTime(InputAction.CallbackContext context);
     }
     public interface IXRIRightLocomotionActions

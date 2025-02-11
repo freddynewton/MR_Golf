@@ -35,27 +35,23 @@ public class XrInputManager : Singleton<XrInputManager>
     /// </summary>
     public Vector2 RightTurnInputValue => rightTurnAction?.ReadValue<Vector2>() ?? Vector2.zero;
 
+    /// <summary>
+    /// Gets the right stick click action.
+    /// </summary>
     public InputAction RightStickClick => rightStickClick;
 
+    /// <summary>
+    /// Called when the script instance is being loaded.
+    /// </summary>
     public override void Awake()
     {
         base.Awake();
     }
 
-    private void OnEnable()
-    {
-        xrInputActions.Enable();
-    }
-
-    private void OnDisable()
-    {
-        xrInputActions.Disable();
-    }
-
     /// <summary>
     /// Initializes the XR input action maps.
     /// </summary>
-    public void initialize()
+    public void Initialize()
     {
         xrInputActions = new XRIDefaultInputActions();
 
@@ -65,9 +61,13 @@ public class XrInputManager : Singleton<XrInputManager>
         XriRightLocomotionActionMap = xrInputActions.XRIRightLocomotion;
         XriLeftLocomotionActionMap = xrInputActions.XRILeftLocomotion;
 
+        // Find the right turn action in the right locomotion action map
         rightTurnAction = XriRightLocomotionActionMap.FindAction("Turn");
-        rightStickClick = XriRightLocomotionActionMap.FindAction("Teleport Mode");
 
+        // Find the right stick click action in the right interaction action map
+        rightStickClick = XriRightInteractionActionMap.FindAction("Right Stick Click");
+
+        // Enable the input actions
         xrInputActions.Enable();
     }
 }

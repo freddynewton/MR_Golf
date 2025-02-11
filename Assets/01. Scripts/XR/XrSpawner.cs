@@ -27,6 +27,8 @@ public class XrSpawner : MonoBehaviour
     [Tooltip("Layers You Can Spawn On")]
     [SerializeField] private LayerMask m_layer;
 
+    [SerializeField] private LayerMask m_layerToIgnore;
+
     [Tooltip("The Maximum Slope You Can Spawn On")]
     [SerializeField] private float m_maxSurfaceAngle = 45;
 
@@ -72,6 +74,7 @@ public class XrSpawner : MonoBehaviour
     private Vector3 m_currentSpawnSmoothForward;
     private Vector3 m_currentSpawnForward;
     private Vector3 m_currentSpawnPosition;
+    private LayerMask m_LayerMaskToIgnoreAndHand;
 
     #endregion
 
@@ -122,9 +125,9 @@ public class XrSpawner : MonoBehaviour
             return;
         }
 
-
-        XrInputManager.Instance.RightStickClick.canceled += _ => CancelSpawn();
-        XrInputManager.Instance.RightStickClick.performed += _ => ToggleSpawn();
+        m_LayerMaskToIgnoreAndHand = (Hand.GetHandsLayerMask() | m_layerToIgnore);
+        //XrInputManager.Instance.RightStickClick.canceled += _ => CancelSpawn();
+        XrInputManager.Instance.RightStickClick.started += _ => ToggleSpawn();
         m_isInitialized = true;
     }
 
@@ -182,6 +185,8 @@ public class XrSpawner : MonoBehaviour
         m_hitting = false;
         m_aiming = false;
         m_OnStopSpawn?.Invoke();
+
+        Debug.Log("Cancel Spawn");
     }
 
     /// <summary>
@@ -241,7 +246,7 @@ public class XrSpawner : MonoBehaviour
             lineList.Add(m_lineArr[i]);
             if (i != 0)
             {
-                if (Physics.Raycast(m_lineArr[i - 1], m_lineArr[i] - m_lineArr[i - 1], out m_aimHit, Vector3.Distance(m_lineArr[i], m_lineArr[i - 1]), ~Hand.GetHandsLayerMask(), QueryTriggerInteraction.Ignore))
+                if (Physics.Raycast(m_lineArr[i - 1], m_lineArr[i] - m_lineArr[i - 1], out m_aimHit, Vector3.Distance(m_lineArr[i], m_lineArr[i - 1]), ~m_LayerMaskToIgnoreAndHand, QueryTriggerInteraction.Ignore))
                 {
                     // Makes sure the angle isn't too steep
                     if (Vector3.Angle(m_aimHit.normal, Vector3.up) <= m_maxSurfaceAngle && m_layer == (m_layer | (1 << m_aimHit.collider.gameObject.layer)))

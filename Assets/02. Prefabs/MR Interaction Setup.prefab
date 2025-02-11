@@ -1965,6 +1965,9 @@ MonoBehaviour:
   m_layer:
     serializedVersion: 2
     m_Bits: 291
+  m_layerToIgnore:
+    serializedVersion: 2
+    m_Bits: 0
   m_maxSurfaceAngle: 45
   m_distanceMultiplyer: 1
   m_curveStrength: 1

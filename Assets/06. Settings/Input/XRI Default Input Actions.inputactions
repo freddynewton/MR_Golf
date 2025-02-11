@@ -2030,7 +2030,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Scale Toggle",
+                    "name": "Right Stick Click",
                     "type": "Button",
                     "id": "5ad73d15-99a4-4bce-a76f-f49815602416",
                     "expectedControlType": "",
@@ -2298,7 +2298,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Scale Toggle",
+                    "action": "Right Stick Click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
