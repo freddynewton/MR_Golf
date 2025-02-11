@@ -55,7 +55,7 @@ public class XrInputManager : Singleton<XrInputManager>
     /// <summary>
     /// Initializes the XR input action maps.
     /// </summary>
-    public void Initialize()
+    public void initialize()
     {
         xrInputActions = new XRIDefaultInputActions();
 

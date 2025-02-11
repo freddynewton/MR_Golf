@@ -16,11 +16,39 @@ public class GolfSpawnHandler : MonoBehaviour
     [Tooltip("The container for the golf track.")]
     [SerializeField] private Transform golfTrackContainer;
 
-
+    [SerializeField] private Transform areaPlane;
 
     private SpawnRotationIndicatorController spawnRotationIndicatorController;
     private bool isTurning;
     private float currentRotationSpeed;
+    private bool isInitialized;
+
+    public void SetGolfTrackActive(bool active)
+    {
+        // TODO ANIMATE
+        golfTrackContainer.gameObject.SetActive(active);
+    }
+
+    public void SetPlaneActive(bool active)
+    {
+        // TODO ANIMATE
+        areaPlane.gameObject.SetActive(active);
+    }
+
+    public void SetRotationIndicatorActive(bool active)
+    {
+        // TODO ANIMATE
+        spawnRotationIndicatorController.gameObject.SetActive(active);
+    }
+
+    public void initialize()
+    {
+        SetPlaneActive(false);
+        SetRotationIndicatorActive(false);
+        SetGolfTrackActive(false);
+
+        isInitialized = true;
+    }
 
     /// <summary>
     /// Initializes the component.
@@ -35,7 +63,7 @@ public class GolfSpawnHandler : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        if (!gameObject.activeInHierarchy)
+        if (!isInitialized)
         {
             return;
         }

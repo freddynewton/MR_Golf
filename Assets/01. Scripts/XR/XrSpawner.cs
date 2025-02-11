@@ -2,7 +2,6 @@ using Autohand;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
 
 /// <summary>
 /// Handles the spawning of a golf track in the scene.
@@ -63,7 +62,7 @@ public class XrSpawner : MonoBehaviour
 
     #region Private Fields
 
-    private bool m_isInitialzied;
+    private bool m_isInitialized;
 
     private Vector3[] m_lineArr;
     private bool m_aiming;
@@ -116,9 +115,9 @@ public class XrSpawner : MonoBehaviour
 
     #region Public Methods
 
-    public void Initiliaze()
+    public void Initilize()
     {
-        if (m_isInitialzied)
+        if (m_isInitialized)
         {
             return;
         }
@@ -126,12 +125,12 @@ public class XrSpawner : MonoBehaviour
 
         XrInputManager.Instance.RightStickClick.canceled += _ => CancelSpawn();
         XrInputManager.Instance.RightStickClick.performed += _ => ToggleSpawn();
-        m_isInitialzied = true;
+        m_isInitialized = true;
     }
 
     public void ToggleSpawn()
     {
-        if (!m_isInitialzied)
+        if (!m_isInitialized)
         {
             return;
         }
@@ -139,10 +138,18 @@ public class XrSpawner : MonoBehaviour
         if (m_aiming)
         {
             Spawn();
+
+            MainManager.Instance.GolfSpawnHandler.SetGolfTrackActive(true);
+            MainManager.Instance.GolfSpawnHandler.SetPlaneActive(false);
+            MainManager.Instance.GolfSpawnHandler.SetRotationIndicatorActive(false);
         }
         else
         {
             StartSpawn();
+
+            MainManager.Instance.GolfSpawnHandler.SetGolfTrackActive(true);
+            MainManager.Instance.GolfSpawnHandler.SetPlaneActive(true);
+            MainManager.Instance.GolfSpawnHandler.SetRotationIndicatorActive(true);
         }
     }
 
@@ -151,7 +158,7 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     public void StartSpawn()
     {
-        if (!m_isInitialzied)
+        if (!m_isInitialized)
         {
             return;
         }
@@ -165,7 +172,7 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     public void CancelSpawn()
     {
-        if (!m_isInitialzied)
+        if (!m_isInitialized)
         {
             return;
         }
@@ -182,7 +189,7 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     public void Spawn()
     {
-        if (!m_isInitialzied)
+        if (!m_isInitialized)
         {
             return;
         }
