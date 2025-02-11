@@ -35,6 +35,11 @@ public class GolfSpawnHandler : MonoBehaviour
     /// </summary>
     private void Update()
     {
+        if (!gameObject.activeInHierarchy)
+        {
+            return;
+        }
+
         Vector2 turnInput = XrInputManager.Instance.RightTurnInputValue;
 
         if (turnInput.x != 0)
@@ -52,11 +57,11 @@ public class GolfSpawnHandler : MonoBehaviour
             // Set highlight based on the direction of the rotation
             if (turnInput.x > 0)
             {
-                spawnRotationIndicatorController.SetHighlight(false); // Highlight right indicator
+                spawnRotationIndicatorController.SetHighlight(true); // Highlight right indicator
             }
             else if (turnInput.x < 0)
             {
-                spawnRotationIndicatorController.SetHighlight(true); // Highlight left indicator
+                spawnRotationIndicatorController.SetHighlight(false); // Highlight left indicator
             }
         }
         else

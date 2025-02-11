@@ -775,7 +775,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5058645713495317022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab68ce6587aab0146b8dabefbd806791, type: 3}
   m_Name: 
@@ -1558,6 +1558,42 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6707951067419483808, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: useMovement
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707951067419483808, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: maxMoveSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707951067419483808, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: rotationType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707951067419483808, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: snapTurnAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707951067419483808, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: smoothTurnSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707951067419483808, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: moveAcceleration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707951067419483809, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707951067419483810, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707951067419483820, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1899,9 +1935,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3686317504681481292, guid: 89dffe45961978543a2f1c5389c77fcf, type: 3}
       insertIndex: 1
       addedObject: {fileID: 6080624131275152385}
-    - targetCorrespondingSourceObject: {fileID: 3686317504681481292, guid: 89dffe45961978543a2f1c5389c77fcf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4340979133539851474}
   m_SourcePrefab: {fileID: 100100000, guid: 89dffe45961978543a2f1c5389c77fcf, type: 3}
 --- !u!120 &985448664715098694 stripped
 LineRenderer:
@@ -2006,21 +2039,6 @@ MonoBehaviour:
   m_OnSpawn:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4340979133539851474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137272195997014787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eafa42d42650a04db3b2c80e1ed0679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  XrSpawner: {fileID: 6080624131275152385}
-  role: 5
-  button: 5
 --- !u!4 &1581480512139437821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2959574215978297778, guid: 89dffe45961978543a2f1c5389c77fcf, type: 3}

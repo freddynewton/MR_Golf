@@ -2,6 +2,7 @@ using Autohand;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Handles the spawning of a golf track in the scene.
@@ -62,6 +63,8 @@ public class XrSpawner : MonoBehaviour
 
     #region Private Fields
 
+    private bool m_isInitialzied;
+
     private Vector3[] m_lineArr;
     private bool m_aiming;
     private bool m_hitting;
@@ -113,11 +116,46 @@ public class XrSpawner : MonoBehaviour
 
     #region Public Methods
 
+    public void Initiliaze()
+    {
+        if (m_isInitialzied)
+        {
+            return;
+        }
+
+
+        XrInputManager.Instance.RightStickClick.canceled += _ => CancelSpawn();
+        XrInputManager.Instance.RightStickClick.performed += _ => ToggleSpawn();
+        m_isInitialzied = true;
+    }
+
+    public void ToggleSpawn()
+    {
+        if (!m_isInitialzied)
+        {
+            return;
+        }
+
+        if (m_aiming)
+        {
+            Spawn();
+        }
+        else
+        {
+            StartSpawn();
+        }
+    }
+
     /// <summary>
     /// Starts the spawning process.
     /// </summary>
     public void StartSpawn()
     {
+        if (!m_isInitialzied)
+        {
+            return;
+        }
+
         m_aiming = true;
         m_OnStartSpawn?.Invoke();
     }
@@ -127,13 +165,16 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     public void CancelSpawn()
     {
+        if (!m_isInitialzied)
+        {
+            return;
+        }
+
         m_line.positionCount = 0;
         m_line.enabled = false;
         m_hitting = false;
         m_aiming = false;
         m_OnStopSpawn?.Invoke();
-
-        // m_spawnGolfTrack.Despawn();
     }
 
     /// <summary>
@@ -141,6 +182,11 @@ public class XrSpawner : MonoBehaviour
     /// </summary>
     public void Spawn()
     {
+        if (!m_isInitialzied)
+        {
+            return;
+        }
+
         if (m_hitting)
         {
             if (m_gameSpawnContainer != null)
