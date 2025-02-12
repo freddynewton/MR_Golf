@@ -36,6 +36,6 @@ public class MainManager : Singleton<MainManager>
         // Initialize the XR input manager, XR spawner, and golf spawn handler
         XrInputManager.Instance.Initialize();
         XrSpawner.Initilize();
-        m_GolfSpawnHandler.initialize();
+        m_GolfSpawnHandler.Initialize();
     }
 }

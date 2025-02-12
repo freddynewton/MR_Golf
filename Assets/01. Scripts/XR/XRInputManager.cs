@@ -40,12 +40,16 @@ public class XrInputManager : Singleton<XrInputManager>
     /// </summary>
     public InputAction RightStickClick => rightStickClick;
 
+    private bool m_isInitialized;
+
     /// <summary>
     /// Called when the script instance is being loaded.
     /// </summary>
     public override void Awake()
     {
         base.Awake();
+
+        Initialize();
     }
 
     /// <summary>
@@ -53,6 +57,11 @@ public class XrInputManager : Singleton<XrInputManager>
     /// </summary>
     public void Initialize()
     {
+        if (m_isInitialized)
+        {
+            return;
+        }
+
         xrInputActions = new XRIDefaultInputActions();
 
         XriRightInteractionActionMap = xrInputActions.XRIRightInteraction;
@@ -69,5 +78,7 @@ public class XrInputManager : Singleton<XrInputManager>
 
         // Enable the input actions
         xrInputActions.Enable();
+
+        m_isInitialized = true;
     }
 }

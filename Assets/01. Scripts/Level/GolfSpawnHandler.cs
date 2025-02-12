@@ -23,7 +23,8 @@ public class GolfSpawnHandler : MonoBehaviour
 
     [SerializeField] private AreaPlaneShaderHelper areaPlane;
 
-    private SpawnRotationIndicatorController spawnRotationIndicatorController;
+    [SerializeField] private SpawnRotationIndicatorController spawnRotationIndicatorController;
+    
     private bool isTurning;
     private float currentRotationSpeed;
     private bool isInitialized = false;
@@ -53,7 +54,7 @@ public class GolfSpawnHandler : MonoBehaviour
         //spawnRotationIndicatorController.transform.DOScale(active ? Vector3.one : Vector3.zero, 0.33f).SetEase(Ease.OutBack);
     }
 
-    public void initialize()
+    public void Initialize()
     {
         areaPlane.FadeDuration = m_animationDuration;
 
@@ -83,6 +84,8 @@ public class GolfSpawnHandler : MonoBehaviour
         }
 
         Vector2 turnInput = XrInputManager.Instance.RightTurnInputValue;
+
+        Debug.Log(turnInput); 
 
         if (turnInput.x != 0)
         {
