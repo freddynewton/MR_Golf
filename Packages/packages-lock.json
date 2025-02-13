@@ -1,5 +1,19 @@
 {
   "dependencies": {
+    "com.bazyleu.unistate": {
+      "version": "https://github.com/bazyleu/UniState.git?path=Assets/UniState",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "60808d3470152d93f57a0f91f393fbd8bd251c5d"
+    },
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "8042b29ff87dd5506d7aad72bd6d8d7405985f27"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -404,6 +418,13 @@
         "com.unity.xr.legacyinputhelpers": "2.1.2"
       },
       "url": "https://packages.unity.com"
+    },
+    "jp.hadashikick.vcontainer": {
+      "version": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.16.8",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "5e6f5cc14b6dc8b94251bf6c0d6c37025a6ecf77"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",
