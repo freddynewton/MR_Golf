@@ -48,7 +48,7 @@ PlayerSettings:
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
-  unsupportedMSAAFallback: 0
+  unsupportedMSAAFallback: 1
   m_SpriteBatchMaxVertexCount: 65535
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
@@ -574,7 +574,7 @@ PlayerSettings:
     m_GraphicsJobMode: 0
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: AndroidPlayer
-    m_APIs: 150000000b000000
+    m_APIs: 0b00000015000000
     m_Automatic: 0
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
@@ -881,23 +881,23 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   scriptingDefineSymbols:
-    Android: USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS;DOTWEEN
-    EmbeddedLinux: DOTWEEN
+    Android: USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS;DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
+    EmbeddedLinux: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
     GameCoreScarlett: DOTWEEN
-    GameCoreXboxOne: DOTWEEN
+    GameCoreXboxOne: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
     LinuxHeadlessSimulation: DOTWEEN
-    Nintendo Switch: DOTWEEN
-    PS4: DOTWEEN
-    PS5: DOTWEEN
-    QNX: DOTWEEN
-    ReservedCFE: DOTWEEN
-    Standalone: USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS;DOTWEEN
-    VisionOS: DOTWEEN
-    WebGL: DOTWEEN
+    Nintendo Switch: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
+    PS4: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
+    PS5: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
+    QNX: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
+    ReservedCFE: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
+    Standalone: USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS;DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
+    VisionOS: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
+    WebGL: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
     Windows Store Apps: USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS;DOTWEEN
-    XboxOne: DOTWEEN
+    XboxOne: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
     iPhone: DOTWEEN
-    tvOS: DOTWEEN
+    tvOS: DOTWEEN;UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

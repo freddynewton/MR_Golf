@@ -1,3 +1,4 @@
+using StateMachine;
 using UnityEngine;
 
 /// <summary>
@@ -21,6 +22,8 @@ public class MainManager : Singleton<MainManager>
 
     [Tooltip("Reference to the golf spawn handler component.")]
     [SerializeField] private GolfSpawnHandler m_GolfSpawnHandler;
+
+    private GameStateMachine GameStateMachine;
 
     /// <summary>
     /// Initializes the main manager and its components.
