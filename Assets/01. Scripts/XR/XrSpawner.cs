@@ -142,17 +142,19 @@ public class XrSpawner : MonoBehaviour
         {
             Spawn();
 
-            MainManager.Instance.GolfSpawnHandler.SetGolfTrackActive(true);
-            MainManager.Instance.GolfSpawnHandler.SetPlaneActive(false);
-            MainManager.Instance.GolfSpawnHandler.SetRotationIndicatorActive(false);
+            MainManager.Instance.GolfSpawnHandler.SetGolfTrackContainerVisibility(true);
+            MainManager.Instance.GolfSpawnHandler.SetAreaPlaneVisibility(false);
+            MainManager.Instance.GolfSpawnHandler.SetRotationIndicatorVisibility(false);
+            MainManager.Instance.GolfSpawnHandler.SetGolfToolsContainerVisibility(true);
         }
         else
         {
             StartSpawn();
 
-            MainManager.Instance.GolfSpawnHandler.SetGolfTrackActive(true);
-            MainManager.Instance.GolfSpawnHandler.SetPlaneActive(true);
-            MainManager.Instance.GolfSpawnHandler.SetRotationIndicatorActive(true);
+            MainManager.Instance.GolfSpawnHandler.SetGolfTrackContainerVisibility(true);
+            MainManager.Instance.GolfSpawnHandler.SetAreaPlaneVisibility(true);
+            MainManager.Instance.GolfSpawnHandler.SetRotationIndicatorVisibility(true);
+            MainManager.Instance.GolfSpawnHandler.SetGolfToolsContainerVisibility(false);
         }
     }
 

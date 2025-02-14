@@ -31,10 +31,10 @@ public class SpawnRotationIndicatorController : MonoBehaviour
     /// <summary>
     /// Sets the highlight for the specified indicator.
     /// </summary>
-    /// <param name="isLeft">If true, highlights the left indicator; otherwise, highlights the right indicator.</param>
-    public void SetHighlight(bool isLeft)
+    /// <param name="isRight">If true, highlights the left indicator; otherwise, highlights the right indicator.</param>
+    public void SetHighlight(bool isRight)
     {
-        if (isLeft)
+        if (isRight)
         {
             _leftIndicator.DOScale(new Vector3(-1 * _highlightScale, 1 * _highlightScale, _leftIndicator.localScale.z), _highlightDuration).SetEase(_ease);
             _rightIndicator.DOScale(new Vector3(1, 1, _rightIndicator.localScale.z), _highlightDuration).SetEase(_ease);

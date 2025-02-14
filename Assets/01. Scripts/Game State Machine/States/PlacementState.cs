@@ -21,9 +21,9 @@ namespace StateMachine
         {
             m_XrSpawner.StartSpawn();
 
-            m_GolfSpawnHandler.SetGolfTrackActive(true);
-            m_GolfSpawnHandler.SetPlaneActive(true);
-            m_GolfSpawnHandler.SetRotationIndicatorActive(true);
+            m_GolfSpawnHandler.SetGolfTrackContainerVisibility(true);
+            m_GolfSpawnHandler.SetAreaPlaneVisibility(true);
+            m_GolfSpawnHandler.SetRotationIndicatorVisibility(true);
 
             StateTransitionInfo transitionInfo = new StateTransitionInfo();
             

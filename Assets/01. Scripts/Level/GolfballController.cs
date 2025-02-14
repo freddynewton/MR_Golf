@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class GolfballController : MonoBehaviour
 {
+    public Rigidbody Rigidbody { get { return m_rigidbody; } private set { m_rigidbody = value; } }
+
     [Header("Settings")]
     [SerializeField] private float m_stoppingSpeed = 0.2f;
     [SerializeField] private float m_forceMultiplier = 2.0f;

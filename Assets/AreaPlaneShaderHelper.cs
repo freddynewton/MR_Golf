@@ -17,8 +17,6 @@ public class AreaPlaneShaderHelper : MonoBehaviour
     [Tooltip("MeshRenderer component of the area plane.")]
     [SerializeField] private MeshRenderer m_meshRenderer;
 
-    private Material areaPlaneMaterial;
-
     /// <summary>
     /// Initializes the component.
     /// </summary>
@@ -27,12 +25,7 @@ public class AreaPlaneShaderHelper : MonoBehaviour
         // Ensure the MeshRenderer component is assigned
         m_meshRenderer ??= GetComponent<MeshRenderer>();
 
-        // Get the material from the MeshRenderer
-        areaPlaneMaterial = m_meshRenderer.material;
-
-        areaPlaneMaterial.SetFloat("_Alpha", 0);
-
-        SetVisibility(false);
+        m_meshRenderer.material.SetFloat("_Alpha", 0);
     }
 
 
@@ -44,7 +37,7 @@ public class AreaPlaneShaderHelper : MonoBehaviour
     public void SetVisibility(bool active)
     {
         // Fade the material's alpha to 1 (visible) or 0 (hidden) over the specified duration with the specified easing
-        areaPlaneMaterial.DOKill();
-        areaPlaneMaterial.DOFloat(active ? 1 : 0, "_Alpha", FadeDuration).SetEase(m_fadeEase);
+        m_meshRenderer.material.DOKill();
+        m_meshRenderer.material.DOFloat(active ? 1 : 0, "_Alpha", FadeDuration).SetEase(m_fadeEase);
     }
 }
