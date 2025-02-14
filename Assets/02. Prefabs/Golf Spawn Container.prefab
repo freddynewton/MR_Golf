@@ -1,532 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1459143341868952850
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6741067324567853271}
-  - component: {fileID: 8994128246710053961}
-  m_Layer: 12
-  m_Name: Particle System Force Field (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &6741067324567853271
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459143341868952850}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.7071064, y: -0, z: -0, w: 0.7071072}
-  m_LocalPosition: {x: 0.004, y: 0.435, z: -0.103}
-  m_LocalScale: {x: 0.46, y: 0.46, z: 0.46}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1210485938038432359}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!330 &8994128246710053961
-ParticleSystemForceField:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459143341868952850}
-  m_Enabled: 1
-  m_Parameters:
-    m_Shape: 2
-    m_StartRange: 0
-    m_EndRange: 0.1
-    m_Length: 0.57
-    m_GravityFocus: 0.3
-    m_RotationRandomness: {x: 0.09, y: 0.03}
-    m_DirectionCurveX:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_DirectionCurveY:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_DirectionCurveZ:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: -10
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_GravityCurve:
-      serializedVersion: 2
-      minMaxState: 3
-      scalar: 0.8
-      minScalar: 0.5
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_RotationSpeedCurve:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_RotationAttractionCurve:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_DragCurve:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_VectorField: {fileID: 0}
-    m_VectorFieldSpeedCurve:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_VectorFieldAttractionCurve:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_MultiplyDragByParticleSize: 1
-    m_MultiplyDragByParticleVelocity: 1
 --- !u!1 &3790074076414810256
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,101 +149,81 @@ MonoBehaviour:
   - m_EditModeType: 1
     m_Knots:
     - Position:
-        x: 0.017154783
-        y: -0.024773479
-        z: -0.009529471
+        x: 0.022373378
+        y: 0.0030249804
+        z: 0.042316556
       TangentIn:
-        x: -0
-        y: -0
-        z: -0
-      TangentOut:
-        x: 0.14596795
-        y: 0.029277727
-        z: 0.2407639
-      Rotation:
-        value:
-          x: 0.118416935
-          y: 0
-          z: 0.6687973
-          w: 0.7339534
-    - Position:
-        x: 0.07566838
-        y: 0.24592642
-        z: 0.725056
-      TangentIn:
-        x: 0.0044982582
-        y: -0.017704546
-        z: -0.04611115
-      TangentOut:
-        x: 0.00082086027
-        y: -0.010738552
-        z: 0.06679964
-      Rotation:
-        value:
-          x: -0.15580326
-          y: 0.014263211
-          z: -0.10795094
-          w: 0.9817681
-    - Position:
-        x: 0.100183725
-        y: 0.16177575
-        z: 1.2203603
-      TangentIn:
-        x: -0
-        y: -0
-        z: -0.15645957
+        x: 0
+        y: 0
+        z: -0.08617545
       TangentOut:
         x: 0
         y: 0
-        z: 0.13766375
+        z: 0.16018121
       Rotation:
         value:
-          x: 0.11605012
-          y: 0.04632653
-          z: -0.20982102
-          w: 0.9697223
+          x: -0.023791404
+          y: 0.0602521
+          z: 0.67424726
+          w: 0.73565906
     - Position:
-        x: 0.113150954
-        y: 0.03708987
-        z: 1.5890367
+        x: 0.07898106
+        y: 0.27632195
+        z: 0.7921063
       TangentIn:
-        x: -0
-        y: -0
-        z: -0.09470858
+        x: 0
+        y: 0
+        z: -0.36252668
       TangentOut:
         x: 0
         y: 0
-        z: 0.054774247
+        z: 0.18619531
       Rotation:
         value:
-          x: 0.11813342
-          y: 0.01888592
-          z: 0.061249852
-          w: 0.9909269
+          x: -0.15278946
+          y: 0.015712405
+          z: -0.13326581
+          w: 0.9791061
     - Position:
-        x: 0.12227443
-        y: 0.018673494
-        z: 1.7176547
+        x: 0.09467608
+        y: 0.117974654
+        z: 1.3038836
       TangentIn:
         x: -0
         y: -0
-        z: -0.013024973
+        z: -0.15315706
       TangentOut:
         x: 0
         y: 0
-        z: 0.013024973
+        z: 0.114933014
       Rotation:
         value:
-          x: 0.07662909
-          y: 0.01979421
-          z: 0.2050506
-          w: 0.9755462
+          x: 0.14948118
+          y: 0.01371859
+          z: 0.060389336
+          w: 0.98682326
+    - Position:
+        x: 0.113075465
+        y: 0.030086473
+        z: 1.5920278
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.030181115
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.030181115
+      Rotation:
+        value:
+          x: 0.15047093
+          y: -0.000065839995
+          z: 0.20299822
+          w: 0.9675486
     m_MetaData:
-    - Mode: 4
+    - Mode: 3
       Tension: 0.5
-    - Mode: 4
-      Tension: 0.5
-    - Mode: 0
+    - Mode: 3
       Tension: 0.5
     - Mode: 0
       Tension: 0.5
@@ -806,8 +259,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.08
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.05
+  m_Center: {x: 0.02, y: 0, z: 0.05}
 --- !u!114 &2526085108641916970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,8 +273,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26dfd9f4fa479e408a0460d87904615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_baseSpeed: 2
+  m_lerpToStartDuration: 0.33
   m_splineContainer: {fileID: 7315584905069989934}
-  m_speed: 200
 --- !u!1 &6188869245543768364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,533 +562,6 @@ MonoBehaviour:
   OnDispenseEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &8999781221488136381
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8887502360719735944}
-  - component: {fileID: 5673380147877484989}
-  m_Layer: 12
-  m_Name: Particle System Force Field (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &8887502360719735944
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8999781221488136381}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.5271108, y: 0.00067066937, z: -0.00024694062, w: 0.84979635}
-  m_LocalPosition: {x: -0.008, y: 0.349, z: -0.456}
-  m_LocalScale: {x: 0.46, y: 0.46, z: 0.46}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1210485938038432359}
-  m_LocalEulerAnglesHint: {x: 63.621, y: 0.113, z: 0.037}
---- !u!330 &5673380147877484989
-ParticleSystemForceField:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8999781221488136381}
-  m_Enabled: 1
-  m_Parameters:
-    m_Shape: 2
-    m_StartRange: 0
-    m_EndRange: 0.1
-    m_Length: 1
-    m_GravityFocus: 0.3
-    m_RotationRandomness: {x: 0.09, y: 0.03}
-    m_DirectionCurveX:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_DirectionCurveY:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_DirectionCurveZ:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: -10
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_GravityCurve:
-      serializedVersion: 2
-      minMaxState: 3
-      scalar: 0.8
-      minScalar: 0.5
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_RotationSpeedCurve:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_RotationAttractionCurve:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 1
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_DragCurve:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_VectorField: {fileID: 0}
-    m_VectorFieldSpeedCurve:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 1
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_VectorFieldAttractionCurve:
-      serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
-      minScalar: 0
-      maxCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      minCurve:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-    m_MultiplyDragByParticleSize: 1
-    m_MultiplyDragByParticleVelocity: 1
 --- !u!1001 &5216406373466886413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1913,6 +840,146 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_MetaData.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[3].Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Position.y
+      value: 0.049000427
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Position.z
+      value: -0.049333394
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Position.y
+      value: 0.07600042
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Position.z
+      value: -0.16383338
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Position.y
+      value: 0.22380042
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Position.z
+      value: -0.7833334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].TangentIn.z
+      value: -0.011764034
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].TangentIn.z
+      value: -0.0521851
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].TangentIn.z
+      value: -0.11656622
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].TangentIn.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].TangentIn.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].TangentIn.z
+      value: -0.018194133
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].TangentOut.z
+      value: 0.011764034
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].TangentOut.z
+      value: 0.10460362
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].TangentOut.z
+      value: 0.07232027
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].TangentOut.z
+      value: 0.018194133
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Rotation.value.w
+      value: 0.07989146
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Rotation.value.x
+      value: -0.6868901
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Rotation.value.y
+      value: 0.7175198
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Rotation.value.z
+      value: 0.083453976
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Rotation.value.w
+      value: 0.0029570924
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Rotation.value.x
+      value: -0.019283365
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Rotation.value.y
+      value: 0.9882573
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Rotation.value.z
+      value: 0.15154867
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Rotation.value.w
+      value: -0.0000057218695
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Rotation.value.x
+      value: 0.00009839121
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Rotation.value.y
+      value: 0.9983133
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Rotation.value.z
+      value: 0.05805619
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Rotation.value.w
+      value: -0.0011328139
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Rotation.value.x
+      value: -0.015627556
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Rotation.value.y
+      value: 0.9972606
+      objectReference: {fileID: 0}
+    - target: {fileID: 2484313329813220865, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Rotation.value.z
+      value: -0.07228965
+      objectReference: {fileID: 0}
     - target: {fileID: 3015399770326824477, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2179,19 +1246,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_MetaData.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[0].Mode
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[1].Mode
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_MetaData.Array.data[3].Mode
@@ -2203,51 +1270,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Position.x
-      value: 0.018348008
+      value: 0.01937446
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Position.y
-      value: 0.0025004447
+      value: -0.00054734945
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Position.z
-      value: -0.009529471
+      value: 0.031502903
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Position.x
-      value: 0.0501678
+      value: 0.035117626
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Position.y
-      value: -0.28416425
+      value: -0.27950197
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Position.z
-      value: 0.69514894
+      value: 0.80965984
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Position.x
-      value: 0.08883311
+      value: 0.091459185
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Position.y
-      value: -0.15573148
+      value: -0.09278615
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Position.z
-      value: 1.2532625
+      value: 1.3816526
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Position.x
-      value: 0.09916404
+      value: 0.10796814
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Position.y
-      value: -0.096126094
+      value: -0.05146821
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Position.z
-      value: 1.4833505
+      value: 1.5720869
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[4].Position.x
@@ -2262,24 +1329,32 @@ PrefabInstance:
       value: 1.6129656
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].TangentIn.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
+      propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].TangentIn.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].TangentIn.z
-      value: -0
+      value: -0.07952636
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].TangentIn.x
-      value: 0.0044982582
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].TangentIn.y
-      value: -0.017704546
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].TangentIn.z
-      value: -0.04611115
+      value: -0.24022852
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].TangentIn.z
-      value: -0.14984824
+      value: -0.14589506
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].TangentIn.x
@@ -2291,7 +1366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].TangentIn.z
-      value: -0.06825817
+      value: -0.019556317
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[4].TangentIn.z
@@ -2299,35 +1374,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].TangentOut.x
-      value: -0.026181668
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].TangentOut.y
-      value: 0.023269325
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].TangentOut.z
-      value: 0.2698927
+      value: 0.20593946
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].TangentOut.x
-      value: 0.00082086027
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].TangentOut.y
-      value: -0.010738552
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].TangentOut.z
-      value: 0.06679964
+      value: 0.20538175
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].TangentOut.z
-      value: 0.09647133
+      value: 0.08299417
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].TangentOut.z
-      value: 0.05161113
+      value: 0.019556317
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[4].TangentOut.z
@@ -2335,67 +1410,67 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Rotation.value.w
-      value: 0.7339534
+      value: 0.74831975
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Rotation.value.x
-      value: 0.118416935
+      value: 0.051441908
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Rotation.value.y
-      value: 0
+      value: -0.013210345
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[0].Rotation.value.z
-      value: 0.6687973
+      value: 0.6612087
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Rotation.value.w
-      value: 0.9780942
+      value: 0.9916745
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Rotation.value.x
-      value: 0.1629314
+      value: 0.0037443354
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Rotation.value.y
-      value: 0.03777034
+      value: 0.030403746
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[1].Rotation.value.z
-      value: -0.123928666
+      value: -0.12507294
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Rotation.value.w
-      value: 0.9712873
+      value: 0.98817253
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Rotation.value.x
-      value: -0.12267999
+      value: -0.12828222
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Rotation.value.y
-      value: 0.0027757133
+      value: 0.053419977
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[2].Rotation.value.z
-      value: -0.20382091
+      value: 0.06484632
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Rotation.value.w
-      value: 0.98782897
+      value: 0.971549
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Rotation.value.x
-      value: -0.13418941
+      value: -0.09512975
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Rotation.value.y
-      value: 0.041884724
+      value: 0.06374418
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[3].Rotation.value.z
-      value: 0.06657894
+      value: 0.20731525
       objectReference: {fileID: 0}
     - target: {fileID: 7059034320109224914, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[4].Rotation.value.w
@@ -2501,14 +1576,8 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5705863854638362536, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
-      insertIndex: 16
+      insertIndex: -1
       addedObject: {fileID: 7673518979207017783}
-    - targetCorrespondingSourceObject: {fileID: 5705863854638362536, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6741067324567853271}
-    - targetCorrespondingSourceObject: {fileID: 5705863854638362536, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8887502360719735944}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4152869177840935441, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
       insertIndex: -1
@@ -2543,8 +1612,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26dfd9f4fa479e408a0460d87904615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_baseSpeed: 2
+  m_lerpToStartDuration: 0.33
   m_splineContainer: {fileID: 9050480097200432078}
-  m_speed: 350
 --- !u!135 &1115295822832342061
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2564,8 +1634,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.1
-  m_Center: {x: 0, y: 0.06, z: -0.03}
+  m_Radius: 0.057544827
+  m_Center: {x: 0, y: 0.055972517, z: -0.06842768}
 --- !u!4 &1210485938038432359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5705863854638362536, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
@@ -2606,8 +1676,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.08
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.05
+  m_Center: {x: 0.02, y: 0, z: 0.05}
 --- !u!114 &7787864103485251858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2620,8 +1690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f26dfd9f4fa479e408a0460d87904615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_baseSpeed: 2
+  m_lerpToStartDuration: 0.33
   m_splineContainer: {fileID: 4473609544260505117}
-  m_speed: 200
 --- !u!1 &7368516804437061598 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4152869177840935441, guid: 1e05ed92c4275ad468b7baa0ad61c979, type: 3}
@@ -2747,7 +1818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1924223821136907753, guid: 0e02fab2d3167e147bfcceb128908bae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6056001867276050130, guid: 0e02fab2d3167e147bfcceb128908bae, type: 3}
       propertyPath: m_LocalScale.x
@@ -2763,15 +1834,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6056001867276050130, guid: 0e02fab2d3167e147bfcceb128908bae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.554
+      value: 0.448
       objectReference: {fileID: 0}
     - target: {fileID: 6056001867276050130, guid: 0e02fab2d3167e147bfcceb128908bae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9269389
+      value: 0.211
       objectReference: {fileID: 0}
     - target: {fileID: 6056001867276050130, guid: 0e02fab2d3167e147bfcceb128908bae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.672
+      value: 1.478
       objectReference: {fileID: 0}
     - target: {fileID: 6056001867276050130, guid: 0e02fab2d3167e147bfcceb128908bae, type: 3}
       propertyPath: m_LocalRotation.w
